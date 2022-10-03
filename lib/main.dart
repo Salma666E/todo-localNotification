@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:get/get_navigation/src/root/get_material_app.dart';
+import 'package:todo/ui/pages/notification_screen.dart';
 
 import 'ui/pages/home_page.dart';
 
@@ -11,10 +13,14 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return GetMaterialApp(
       title: 'todo',
       debugShowCheckedModeBanner: false,
-      home: HomePage(),
+      theme: ThemeData(
+        primaryColor: Colors.teal,
+        backgroundColor: Colors.teal,
+      ),
+      home: const NotificationScreen(payload: 'ssssssssss|xss|10/10'),
     );
   }
 }
