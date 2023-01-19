@@ -3,6 +3,7 @@ import 'package:get/get_navigation/src/root/get_material_app.dart';
 import 'package:todo/ui/pages/notification_screen.dart';
 import 'package:todo/ui/theme.dart';
 
+import 'services/theme_services.dart';
 import 'ui/pages/home_page.dart';
 
 void main() {
@@ -19,8 +20,8 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: Themes.light,
       darkTheme: Themes.dark,
-      themeMode: ThemeMode.dark,
-      home: const NotificationScreen(payload: 'ssssssssss|xss|10/10'),
+      themeMode: ThemeServices().theme,
+      home: const HomePage(),
     );
   }
 }
